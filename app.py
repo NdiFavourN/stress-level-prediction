@@ -83,7 +83,7 @@ def user_input_features():
     SL = st.sidebar.slider('Study Load (SL)', 0.0, 5.0, 1.0)
     TSR = st.sidebar.slider('Teacher student relationship (TSR)', 0.0, 5.0, 1.0)
     FCC = st.sidebar.slider('Future career concerns (FCC)', 0.0, 5.0, 1.0)
-    SS = st.sidebar.slider('Social support (SS)', 0, 3, 0.1)
+    SS = st.sidebar.slider('Social support (SS)',( 0, 3, 0.1))
     PP = st.sidebar.slider('Peer Pressure (PP)', 0.0, 5.0, 1.0)
     EXA = st.sidebar.slider('Extracurricular activities (EXA)', 0.0, 5.0, 1.0)
     BUL = st.sidebar.slider('Bullying (BUL)', 0.0, 5.0, 1.0)
