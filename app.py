@@ -118,7 +118,7 @@ def generate_advice(input_data):
     for key, value_series in input_data.items():
 #----------- Extract the single value from each column/Series----------------------
         
-        value = value_series.iloc[i]
+        value = value_series.iloc[0]
         if key == "anxiety_level":
            # value= input_data[key].iloc[0]
             if value >= 15 and value < 20:
