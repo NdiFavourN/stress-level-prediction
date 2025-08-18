@@ -319,8 +319,7 @@ def generate_advice(input_data):
 #-------------function calling------------------
 input_data = user_input_features()
 advice = generate_advice(input_data)
-for key, value in advice.items():
-        st.markdown(f"**{key}**: {value}")
+
 # --- Main Panel ---
 st.header("Your Input")
 st.dataframe(input_data)
@@ -336,4 +335,7 @@ if st.sidebar.button("Predict Stress Level"):
     st.balloons()
 
 st.markdown("---")
+for key, value in advice.items():
+        st.markdown(f"**{key}**: {value}")
+st.markdown("---")        
 st.write("Disclaimer: The dataset used for this app has known ethical issues. This app is for educational purposes only.")
