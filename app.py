@@ -115,12 +115,12 @@ def user_input_features():
 
 def generate_advice(input_data):
     advice = {}
-    for key, value_series in input_data.items():
+    for key, value in input_data.items():
 #----------- Extract the single value from each column/Series----------------------
         i=1
-        value = value_series.iloc[i]
+       # value = value_series.iloc[i]
         if key == "anxiety_level":
-            if value >= 15 and value < 20:
+            if value[i] >= 15 and value < 20:
                AXL= "your anxiety levels are rising i would advise you prioritize a healthy lifestyle and seek professional guidance."
                advice['anxiety_level'] = AXL
             elif value >20:
