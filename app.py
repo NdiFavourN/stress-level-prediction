@@ -117,7 +117,8 @@ def generate_advice(input_data):
     advice = {}
     for key, value_series in input_data.items():
 #----------- Extract the single value from each column/Series----------------------
-        value = value_series.iloc[0]
+        i=0
+        value = value_series.iloc[i]
         if key == "anxiety_level":
             if value >= 15 and value < 20:
                AXL= "your anxiety levels are rising i would advise you prioritize a healthy lifestyle and seek professional guidance."
@@ -314,6 +315,7 @@ def generate_advice(input_data):
                 advice['bullying'] = BUL
         else:
             print("no such key.")
+        i=i+1
         return advice
 
 #-------------function calling------------------
@@ -336,6 +338,6 @@ if st.sidebar.button("Predict Stress Level"):
 
 st.markdown("---")
 for key, value in advice.items():
-        st.markdown(f"**{key}**: {value}")
+        st.markdown(f" For ***{key}***:  {value}")
 st.markdown("---")        
 st.write("Disclaimer: The dataset used for this app has known ethical issues. This app is for educational purposes only.")
