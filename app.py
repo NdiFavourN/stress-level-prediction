@@ -131,7 +131,7 @@ def generate_advice(input_data):
                 AXL="your anxiety levels are normal i would advise you to maintain a balanced lifestyle and stay aware of your mental health."
                 advice['anxiety_level'] = AXL
         elif key == "self_esteem":
-            value= input_data[key].iloc[0]
+            value= input_data[key].iloc[1]
             if value >= 15 and value < 20:
                 SE="your self-esteem is slightly average. Consider engaging in activities that promote self-confidence, self-care and building on your strengths."
                 advice['self_esteem'] = SE
