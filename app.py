@@ -337,7 +337,8 @@ if st.sidebar.button("Predict Stress Level"):
     st.balloons()
 
 st.markdown("---")
-for key, value in advice.items():
-        st.markdown(f" For ***{key}***:  {value}")
+#for key, value in advice.items():
+st.markdown()
+        #st.markdown(f" For ***{key}***:  {value}")
 st.markdown("---")        
 st.write("Disclaimer: The dataset used for this app has known ethical issues. This app is for educational purposes only.")
