@@ -320,7 +320,7 @@ def generate_advice(input_data):
 input_data = user_input_features()
 advice = generate_advice(input_data)
 for key, value in advice.items():
-        print(key, value)
+        st.markdown(f"**{key}**: {value}")
 # --- Main Panel ---
 st.header("Your Input")
 st.dataframe(input_data)
