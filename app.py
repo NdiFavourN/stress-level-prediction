@@ -115,10 +115,10 @@ def user_input_features():
 
 def generate_advice(input_data):
     advice = {}
-    for key, value_series in input_data.items():
+    for key, value in input_data.items():
 #----------- Extract the single value from each column/Series----------------------
         
-        value = value_series.iloc[0]
+        value = value.iloc[0]
         if key == "anxiety_level":
            # value= input_data[key].iloc[0]
             if value >= 15 and value < 20:
